@@ -7,8 +7,8 @@ public static void main(String[] args){
     int sayi= scanner.nextInt();
     while(sayi>0){
         
-        System.out.print(sayi % 10);
         sayi/= 10;
+        System.out.print(sayi % 10);
     }
 
 
