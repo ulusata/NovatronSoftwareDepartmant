@@ -2,11 +2,7 @@ import java.util.Scanner;
 
 public class Faktoriyel {
     static long factorial(long x) {
-        long result = 1;
-        for (; x > 1; x--) {
-            result *= x;
-        }
-        return result;
+        return (x == 1) ? 1 : x * factorial(x-1);
     }
     public static void main(String[] args) throws Exception {
         
