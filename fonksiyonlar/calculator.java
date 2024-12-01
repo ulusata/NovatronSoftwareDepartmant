@@ -1,4 +1,4 @@
-
+//Berk Aşık
     import java.util.Scanner;
     public class calculator{
     static double calculator(double sayi, double sayi2, char islem){
