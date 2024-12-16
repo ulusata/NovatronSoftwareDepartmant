@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Utku {
+ 
+ public static void main(String[] args)    {
+    Scanner sc =new Scanner(System.in);
+
+  String bilet;
+  double km,yas,sonuc;
+
+  System.out.println("sadece 'gidis' mi yoksa 'gidis donus' mu ");
+  bilet = sc.nextLine();
+
+  System.out.println("yaşınız kaç: ");
+  yas=sc.nextInt();
+
+  System.out.println("kaç km gideceksiniz: ");
+  km=sc.nextInt();
+ 
+if(yas < 12  ){
+  sonuc = (km*0.1)*1/2;
+  System.out.println("tutarınız: " + sonuc);
+}
+else if(yas < 12 && bilet == "gidis donus"){
+  sonuc = ((km*0.1)*1/2)*80/100;
+  System.out.println("tutarınız: " + sonuc);
+}
+else if(12 <= yas && yas < 24 ){
+  sonuc = ((km*0.1)*1/10);
+  System.out.println("tutarınız: " + sonuc);
+  
+  }
+  else if(12 < yas && yas < 24 && bilet == "gidis sonus"){
+    sonuc = ((km*0.1)*1/10)*8/10;
+    System.out.println("tutarınız: " + sonuc);
+
+}
+else if(65 <= yas   ){
+  sonuc = ((km*0.1)*3/10);
+  System.out.println("tutarınız: " + sonuc);
+
+
+}
+
+else if(65 <= yas && bilet == "gidis donus "  ){
+  sonuc = ((km*0.1)*3/10)*8/10;
+  System.out.println("tutarınız: " + sonuc);
+}
+}
+}
