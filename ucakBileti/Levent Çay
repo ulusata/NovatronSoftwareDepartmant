@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Levent_Cay {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int secim;
+        do {
+            System.out.println("\n Yapacağınız işlem nedir?");
+            System.out.println("1. Bilet fiyatı hesaplama");
+            System.out.println("2. Çıkış");
+            secim = sc.nextInt();
+
+            switch (secim) {
+                case 1:
+
+                    System.out.println("Yaş:");
+                    int musteriYasi = sc.nextInt();
+
+                    System.out.println("Km:");
+                    int kacKm = sc.nextInt();
+
+                    System.out.println("biletiniz tek yönmü(true ,false):");
+                    boolean btipi = sc.nextBoolean();
+
+                    int ucret = kacKm / 10;
+
+                    if (musteriYasi < 12) {
+                        ucret = ucret / 2;
+                    } else if (musteriYasi < 24) {
+                        ucret = ucret * 9 / 10;
+                    } else if (musteriYasi > 65) {
+                        ucret = ucret * 7 / 10;
+                    }
+
+                    if (btipi == true) {
+                        ucret = ucret * 4 / 5;
+                    }
+                    System.out.println("Toplam ücret: " + ucret);
+
+                    break;
+                case 2:
+                    System.out.println("sistemden çıkılıyor...");
+
+                    break;
+                default:
+                    break;
+            }
+
+        } while (secim != 2);
+
+    }
+}
